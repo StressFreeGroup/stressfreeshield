@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stress Free Shield — Interior Accidental Damage Liability Waiver</title>
+<meta name="description" content="Stress Free Shield is a contractual accidental damage liability waiver program for RV and trailer rentals. Not an insurance product." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy:   #042C53;
+  --blue:   #0C447C;
+  --mid:    #185FA5;
+  --bright: #378ADD;
+  --sky:    #B5D4F4;
+  --ice:    #E6F1FB;
+  --white:  #FFFFFF;
+  --off:    #F4F8FD;
+  --slate:  #334155;
+  --muted:  #64748B;
+  --faint:  #94A3B8;
+  --bdr:    #CBD5E1;
+  --gold:   #B45309;
+  --goldbg: #FFFBEB;
+  --goldbdr:#FCD34D;
+  --red:    #991B1B;
+  --redbg:  #FEF2F2;
+  --redbdr: #FCA5A5;
+}
+body { font-family:'DM Sans',sans-serif; background:var(--off); color:var(--slate); }
+a { color:inherit; }
+button { font-family:inherit; }
+
+/* ── Nav ── */
+nav { background:var(--navy); padding:0 32px; display:flex; justify-content:space-between; align-items:center; height:58px; position:sticky; top:0; z-index:100; }
+.nav-brand { display:flex; align-items:center; gap:10px; }
+.nav-logo { font-family:'Libre Baskerville',serif; font-size:16px; font-weight:700; color:var(--white); }
+.nav-sub { font-size:10px; color:var(--sky); letter-spacing:1.5px; text-transform:uppercase; display:block; margin-top:1px; }
+.nav-links { display:flex; gap:4px; }
+.nav-link { background:none; border:none; color:rgba(255,255,255,.45); font-size:12.5px; cursor:pointer; padding:4px 9px; }
+.nav-link.active { color:var(--sky); font-weight:600; }
+.nav-cta { background:var(--bright); color:var(--white); border:none; border-radius:6px; padding:7px 16px; font-size:12.5px; font-weight:600; cursor:pointer; }
+
+/* ── Tabs ── */
+.tab-bar { background:var(--white); border-bottom:1px solid var(--bdr); display:flex; padding:0 32px; overflow-x:auto; }
+.tab { padding:13px 18px; font-size:13px; color:var(--muted); border-bottom:2px solid transparent; cursor:pointer; user-select:none; white-space:nowrap; }
+.tab.active { color:var(--mid); font-weight:600; border-bottom-color:var(--mid); }
+
+/* ── Page sections ── */
+.pg { display:none; }
+.pg.active { display:block; }
+
+/* ── Hero ── */
+.hero { background:var(--navy); padding:64px 40px 56px; text-align:center; position:relative; overflow:hidden; }
+.hero-grid { position:absolute; inset:0; opacity:.04; background-image:linear-gradient(var(--white) 1px,transparent 1px),linear-gradient(90deg,var(--white) 1px,transparent 1px); background-size:40px 40px; pointer-events:none; }
+.hero-inner { position:relative; z-index:1; }
+.hero-ey { display:inline-flex; align-items:center; gap:7px; background:rgba(55,138,221,.15); border:1px solid rgba(55,138,221,.35); color:var(--sky); border-radius:4px; padding:5px 14px; font-size:10.5px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:18px; }
+.hero-dot { width:5px; height:5px; border-radius:50%; background:var(--bright); }
+.hero-h1 { font-family:'Libre Baskerville',serif; font-size:clamp(28px,5vw,52px); font-weight:700; color:var(--white); line-height:1.1; margin-bottom:4px; letter-spacing:-1px; }
+.hero-sub { font-family:'Libre Baskerville',serif; font-size:clamp(13px,2vw,17px); color:var(--sky); margin-bottom:8px; }
+.hero-tag { font-size:14px; color:rgba(255,255,255,.62); max-width:520px; margin:0 auto 28px; line-height:1.75; }
+.rate-row { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:28px; }
+.rate-card { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:10px; padding:16px 22px; text-align:center; min-width:110px; }
+.rate-num { font-family:'Libre Baskerville',serif; font-size:28px; font-weight:700; color:var(--white); display:block; line-height:1; }
+.rate-lbl { font-size:10px; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:1px; margin-top:4px; display:block; }
+.rate-sub { font-size:11px; color:var(--sky); margin-top:2px; display:block; }
+.hero-btns { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.btn-pri { background:var(--bright); color:var(--white); border:none; border-radius:8px; padding:12px 26px; font-size:13.5px; font-weight:600; cursor:pointer; }
+.btn-out { background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,.35); border-radius:8px; padding:12px 26px; font-size:13.5px; font-weight:500; cursor:pointer; }
+.btn-out-sm { background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,.2); border-radius:8px; padding:12px 22px; font-size:12.5px; font-weight:500; cursor:pointer; }
+.not-ins { font-size:10.5px; color:rgba(255,255,255,.35); margin-top:16px; }
+
+/* ── Layout ── */
+.wrap { padding:56px 40px; max-width:960px; margin:0 auto; }
+.wrap-sm { padding:56px 40px; max-width:720px; margin:0 auto; }
+.eyebrow { display:flex; align-items:center; gap:7px; font-size:10.5px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--bright); margin-bottom:10px; }
+.ey-line { width:18px; height:1.5px; background:var(--bright); flex-shrink:0; }
+.sec-title { font-family:'Libre Baskerville',serif; font-size:clamp(22px,3vw,32px); font-weight:700; color:var(--navy); margin-bottom:12px; letter-spacing:-.4px; }
+.sec-lead { font-size:14.5px; color:var(--muted); max-width:560px; line-height:1.75; margin-bottom:36px; }
+.divider { height:1px; background:var(--bdr); }
+
+/* ── Callouts ── */
+.co { border-radius:10px; padding:15px 18px; display:flex; gap:12px; align-items:flex-start; }
+.co.gold { background:var(--goldbg); border:1px solid var(--goldbdr); }
+.co.red  { background:var(--redbg);  border:1px solid var(--redbdr);  }
+.co.blue { background:var(--ice);    border:1px solid var(--sky);     }
+.co-txt.gold { font-size:13px; color:var(--gold); line-height:1.65; }
+.co-txt.red  { font-size:13px; color:var(--red);  line-height:1.65; }
+.co-txt.blue { font-size:13px; color:var(--blue); line-height:1.65; }
+.co-ico { font-size:15px; flex-shrink:0; }
+
+/* ── Step process ── */
+.step-proc { display:grid; grid-template-columns:200px 1fr; border:1px solid var(--bdr); border-radius:12px; overflow:hidden; background:var(--white); }
+.step-rail { background:var(--navy); padding:8px 0; }
+.step-item { display:flex; align-items:center; gap:10px; padding:13px 18px; cursor:pointer; border-left:3px solid transparent; transition:all .18s; }
+.step-item.active { background:rgba(55,138,221,.18); border-left-color:var(--bright); }
+.step-circle { width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,.1); border:1.5px solid rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:var(--white); flex-shrink:0; transition:all .18s; }
+.step-item.active .step-circle { background:var(--bright); border-color:var(--bright); }
+.step-item.done .step-circle { background:var(--mid); border-color:var(--mid); }
+.step-lbl { font-size:10px; color:rgba(255,255,255,.45); }
+.step-item.active .step-lbl { color:var(--white); font-weight:600; }
+.step-prog-wrap { margin:12px 18px 8px; }
+.step-prog-track { height:3px; background:rgba(255,255,255,.1); border-radius:2px; }
+.step-prog-fill { height:100%; background:var(--bright); border-radius:2px; transition:width .35s ease; }
+.step-count { font-size:10px; color:rgba(255,255,255,.35); margin-top:5px; }
+.step-panel { padding:32px; display:flex; flex-direction:column; min-height:280px; }
+.step-hdr { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.step-ico-box { width:40px; height:40px; border-radius:10px; background:var(--off); border:1px solid var(--bdr); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+.step-ico-box.hl { background:var(--ice); border-color:var(--sky); }
+.step-num-lbl { font-size:10px; font-weight:600; color:var(--faint); letter-spacing:1.5px; text-transform:uppercase; }
+.step-title-txt { font-family:'Libre Baskerville',serif; font-size:18px; font-weight:700; color:var(--navy); }
+.review-badge { margin-left:auto; background:var(--ice); border:1px solid var(--sky); color:var(--blue); font-size:10px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase; flex-shrink:0; }
+.step-body-txt { font-size:14px; color:var(--slate); line-height:1.75; margin-bottom:14px; flex:1; }
+.step-detail { border-radius:8px; padding:12px 16px; font-size:12.5px; line-height:1.65; }
+.step-detail.norm { background:var(--off); border:1px solid var(--bdr); color:var(--muted); }
+.step-detail.hl { background:var(--goldbg); border:1px solid var(--goldbdr); color:var(--gold); }
+.step-nav { display:flex; justify-content:space-between; align-items:center; margin-top:20px; }
+.step-btn-prev,.step-btn-next { border-radius:6px; padding:7px 16px; font-size:12px; cursor:pointer; }
+.step-btn-prev { background:none; border:1px solid var(--bdr); color:var(--slate); }
+.step-btn-prev:disabled { opacity:.4; cursor:not-allowed; }
+.step-btn-next { background:var(--mid); border:none; color:var(--white); font-weight:600; }
+.step-btn-next:disabled { background:none; border:1px solid var(--bdr); color:var(--faint); cursor:not-allowed; }
+.step-dots { display:flex; gap:6px; }
+.step-dot { height:7px; border-radius:4px; background:var(--bdr); cursor:pointer; transition:all .25s; }
+.step-dot.active { background:var(--bright); }
+.step-dot.done { background:var(--sky); }
+
+/* ── Coverage ── */
+.cov-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.cov-card { border-radius:12px; padding:24px; }
+.cov-card.yes { background:var(--ice); border:1.5px solid var(--sky); }
+.cov-card.no  { background:var(--redbg); border:1.5px solid var(--redbdr); }
+.cov-hdr { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.cov-ico { width:26px; height:26px; border-radius:50%; color:var(--white); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; flex-shrink:0; }
+.cov-ico.yes { background:var(--mid); }
+.cov-ico.no  { background:var(--red); }
+.cov-title { font-family:'Libre Baskerville',serif; font-size:16px; font-weight:700; }
+.cov-title.yes { color:var(--blue); }
+.cov-title.no  { color:var(--red); }
+.cov-item { display:flex; gap:8px; align-items:flex-start; padding:6px 0; border-bottom:1px solid rgba(55,138,221,.14); font-size:12.5px; color:var(--slate); line-height:1.5; }
+.cov-card.no .cov-item { border-bottom-color:rgba(153,27,27,.1); }
+.cov-dot { width:5px; height:5px; border-radius:50%; margin-top:7px; flex-shrink:0; }
+.cov-dot.yes { background:var(--mid); }
+.cov-dot.no  { background:var(--red); }
+.cov-note { font-size:11px; color:var(--muted); display:block; margin-top:1px; }
+.new-b { font-size:9px; font-weight:700; background:var(--bright); color:var(--white); border-radius:3px; padding:1px 5px; margin-left:5px; display:inline-block; vertical-align:middle; }
+.fest-banner { background:var(--redbg); border:1.5px solid var(--redbdr); border-radius:12px; padding:24px 28px; display:flex; gap:16px; margin-top:24px; }
+.fest-title { font-family:'Libre Baskerville',serif; font-size:16px; font-weight:700; color:var(--red); margin-bottom:8px; }
+.fest-body { font-size:13px; color:var(--slate); line-height:1.65; margin-bottom:8px; }
+.fest-note { font-size:12.5px; color:var(--gold); font-weight:600; }
+
+/* ── Vendors ── */
+.mkt-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px; }
+.mkt-card { background:var(--white); border:1.5px solid var(--sky); border-radius:14px; overflow:hidden; }
+.mkt-card-hdr { background:var(--navy); padding:20px 22px 18px; display:flex; align-items:center; gap:12px; }
+.mkt-ico-box { width:40px; height:40px; border-radius:10px; background:rgba(55,138,221,.25); border:1px solid rgba(55,138,221,.4); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+.mkt-name { font-family:'Libre Baskerville',serif; font-size:16px; font-weight:700; color:var(--white); }
+.mkt-status { font-size:11px; color:var(--sky); margin-top:2px; display:flex; align-items:center; gap:5px; }
+.mkt-green-dot { width:6px; height:6px; border-radius:50%; background:#4ADE80; }
+.mkt-body { padding:18px 22px; }
+.mkt-desc { font-size:13px; color:var(--muted); line-height:1.65; margin-bottom:14px; }
+.mkt-feat { display:flex; gap:8px; align-items:flex-start; margin-bottom:7px; }
+.mkt-feat-dot { width:5px; height:5px; border-radius:50%; background:var(--bright); margin-top:7px; flex-shrink:0; }
+.mkt-feat-txt { font-size:12.5px; color:var(--slate); line-height:1.55; }
+.vendor-section { margin-top:16px; padding-top:14px; border-top:1px solid var(--bdr); }
+.vendor-lbl { font-size:10.5px; font-weight:700; color:var(--faint); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; }
+.vendor-link { display:flex; align-items:center; justify-content:space-between; padding:10px 14px; border-radius:8px; border:1px solid var(--bdr); background:var(--off); margin-bottom:8px; text-decoration:none; transition:border-color .15s; }
+.vendor-link:hover { border-color:var(--bright); }
+.vendor-link-left { display:flex; align-items:center; gap:10px; }
+.vendor-shield-ico { width:28px; height:28px; border-radius:6px; background:var(--navy); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.vendor-name { font-size:13px; font-weight:600; color:var(--navy); }
+.vendor-url { font-size:11px; color:var(--bright); margin-top:1px; }
+.vendor-arrow { font-size:14px; color:var(--faint); }
+.vendor-accepting { margin-top:16px; padding-top:14px; border-top:1px solid var(--bdr); font-size:12px; color:var(--faint); display:flex; align-items:center; gap:7px; }
+.vendor-acc-dot { width:5px; height:5px; border-radius:50%; background:var(--goldbdr); }
+
+/* ── Area picker ── */
+.area-picker { border:1.5px solid var(--bdr); border-radius:10px; overflow:hidden; margin-top:6px; }
+.area-region { border-bottom:1px solid var(--bdr); }
+.area-region:last-child { border-bottom:none; }
+.area-rgn-hdr { display:flex; align-items:center; justify-content:space-between; padding:11px 14px; cursor:pointer; transition:background .15s; }
+.area-rgn-hdr.sel { background:var(--ice); }
+.area-rgn-left { display:flex; align-items:center; gap:8px; }
+.area-rgn-name { font-size:13px; color:var(--slate); }
+.area-rgn-name.sel { color:var(--blue); font-weight:600; }
+.area-sel-dot { width:7px; height:7px; border-radius:50%; background:var(--bright); flex-shrink:0; }
+.area-sel-cnt { font-size:10px; background:var(--mid); color:var(--white); border-radius:10px; padding:1px 7px; font-weight:700; }
+.tier-badge { font-size:9.5px; font-weight:600; padding:2px 7px; border-radius:3px; }
+.tier-badge.top { background:var(--navy); color:var(--sky); }
+.tier-badge.high { background:var(--ice); color:var(--mid); }
+.tier-badge.grow { background:var(--off); color:var(--faint); }
+.area-chev { font-size:11px; color:var(--faint); transition:transform .2s; }
+.area-chev.open { transform:rotate(180deg); }
+.area-cities { padding:10px 14px 14px; background:var(--off); display:flex; flex-wrap:wrap; gap:7px; border-top:1px solid var(--bdr); }
+.city-chip { padding:5px 12px; border-radius:20px; border:1.5px solid var(--bdr); background:var(--white); font-size:12px; color:var(--slate); cursor:pointer; user-select:none; transition:all .14s; }
+.city-chip.sel { border-color:var(--mid); background:var(--ice); color:var(--blue); font-weight:600; }
+.area-selected-pills { margin-top:8px; display:flex; flex-wrap:wrap; gap:5px; }
+.sel-pill { padding:3px 10px; border-radius:20px; background:var(--mid); color:var(--white); font-size:11.5px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:5px; }
+.sel-pill-x { opacity:.7; font-size:13px; line-height:1; }
+
+/* ── Claim form ── */
+.form-notice { background:var(--goldbg); border-bottom:1px solid var(--goldbdr); padding:10px 32px; font-size:12.5px; color:var(--gold); text-align:center; }
+.form-wrap { max-width:640px; margin:0 auto; padding:32px 32px 60px; }
+.csb { display:flex; align-items:center; justify-content:center; margin-bottom:28px; }
+.csb-step { display:flex; flex-direction:column; align-items:center; min-width:68px; }
+.csb-circle { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11.5px; font-weight:700; color:var(--white); background:var(--bdr); transition:all .25s; }
+.csb-circle.act { background:var(--bright); }
+.csb-circle.dn  { background:var(--mid); }
+.csb-lbl { font-size:10px; margin-top:4px; text-align:center; color:var(--faint); }
+.csb-lbl.act { font-weight:600; color:var(--mid); }
+.csb-line { width:36px; height:2px; margin-bottom:18px; background:var(--bdr); flex-shrink:0; transition:background .3s; }
+.csb-line.dn { background:var(--mid); }
+.f-card { background:var(--white); border:1px solid var(--bdr); border-radius:14px; padding:32px; box-shadow:0 1px 12px rgba(4,44,83,.06); }
+.f-title { font-family:'Libre Baskerville',serif; font-size:21px; color:var(--navy); margin-bottom:6px; font-weight:700; }
+.f-lead { font-size:13px; color:var(--muted); margin-bottom:22px; line-height:1.65; }
+.f-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+.f-fld { margin-bottom:14px; }
+.f-lbl { font-size:12px; font-weight:600; color:var(--slate); display:block; margin-bottom:5px; }
+.f-in { width:100%; padding:10px 13px; font-size:13px; border:1.5px solid var(--bdr); border-radius:8px; background:var(--off); color:var(--slate); font-family:inherit; outline:none; }
+.f-ta { width:100%; padding:10px 13px; font-size:13px; border:1.5px solid var(--bdr); border-radius:8px; background:var(--off); color:var(--slate); font-family:inherit; outline:none; min-height:88px; resize:vertical; }
+.dmg-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(175px,1fr)); gap:8px; margin-top:8px; }
+.dmg-chip { display:flex; align-items:center; gap:8px; padding:9px 12px; border-radius:8px; border:1.5px solid var(--bdr); background:var(--white); cursor:pointer; font-size:12.5px; color:var(--slate); transition:all .15s; user-select:none; }
+.dmg-chip.sel { border-color:var(--mid); background:var(--ice); color:var(--blue); font-weight:600; }
+.new-chip { font-size:9px; font-weight:700; background:var(--bright); color:var(--white); border-radius:3px; padding:1px 4px; margin-left:auto; flex-shrink:0; }
+.up-zone { border:2px dashed var(--bdr); background:var(--off); border-radius:10px; padding:26px 18px; text-align:center; cursor:pointer; margin-bottom:14px; }
+.up-ico { font-size:22px; margin-bottom:6px; }
+.up-txt { font-size:12.5px; color:var(--muted); }
+.up-hint { font-size:11px; color:var(--faint); margin-top:4px; }
+.f-nav { display:flex; justify-content:space-between; margin-top:24px; padding-top:18px; border-top:1px solid var(--bdr); }
+.btn-back { background:none; border:1.5px solid var(--bdr); border-radius:8px; padding:10px 20px; font-size:12.5px; font-weight:600; color:var(--slate); cursor:pointer; }
+.btn-back:disabled { opacity:.4; cursor:not-allowed; }
+.btn-next { background:var(--mid); border:none; border-radius:8px; padding:10px 24px; font-size:12.5px; font-weight:600; color:var(--white); cursor:pointer; }
+.btn-submit { width:100%; padding:14px; background:var(--navy); color:var(--white); border:none; border-radius:10px; font-size:14.5px; font-weight:700; cursor:pointer; }
+.tl-row { display:flex; gap:14px; padding:8px 0; border-bottom:1px solid var(--ice); }
+.tl-time { font-weight:600; color:var(--mid); min-width:72px; font-size:12px; }
+.tl-desc { font-size:12.5px; color:var(--muted); }
+.cert-box { background:var(--ice); border:1.5px solid var(--sky); border-radius:10px; padding:16px 18px; margin-bottom:18px; display:flex; gap:12px; align-items:flex-start; }
+.cert-lbl { font-size:12.5px; color:var(--slate); line-height:1.65; }
+.f-foot { font-size:11px; color:var(--faint); text-align:center; margin-top:10px; }
+
+/* ── CTA ── */
+.cta { background:var(--navy); padding:64px 40px; text-align:center; }
+.cta-h { font-family:'Libre Baskerville',serif; font-size:clamp(24px,3.5vw,38px); font-weight:700; color:var(--white); margin-bottom:6px; }
+.cta-sub { font-family:'Libre Baskerville',serif; font-size:clamp(14px,2vw,18px); color:var(--sky); margin-bottom:14px; }
+.cta-body { font-size:14px; color:rgba(255,255,255,.62); max-width:480px; margin:0 auto 28px; line-height:1.75; }
+.cta-btns { display:flex; gap:10px; justify-content:center; }
+.cta-foot { font-size:11.5px; color:rgba(255,255,255,.28); margin-top:28px; }
+
+/* ── TOS ── */
+.tos-noins { background:var(--redbg); border:1px solid var(--redbdr); border-radius:10px; padding:14px 18px; margin-bottom:28px; font-size:13px; color:var(--red); font-weight:600; }
+.tos-item { border-bottom:1px solid var(--bdr); }
+.tos-hdr { display:flex; justify-content:space-between; align-items:center; padding:16px 0; cursor:pointer; }
+.tos-hdr-title { font-family:'Libre Baskerville',serif; font-size:15px; font-weight:700; color:var(--navy); }
+.tos-chev { width:22px; height:22px; border-radius:50%; background:var(--ice); color:var(--mid); display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; transition:all .2s; }
+.tos-chev.open { background:var(--mid); color:var(--white); transform:rotate(180deg); }
+.tos-body { font-size:13.5px; color:var(--slate); line-height:1.8; padding-bottom:18px; display:none; }
+.tos-body.open { display:block; }
+.tos-legal { background:var(--off); border:1px solid var(--bdr); border-radius:10px; padding:20px 24px; margin-top:28px; }
+.tos-legal-lbl { font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--faint); margin-bottom:8px; }
+
+/* ── Vendor form ── */
+.vendor-form-wrap { margin-top:36px; }
+.v-section-title { font-family:'Libre Baskerville',serif; font-size:22px; font-weight:700; color:var(--navy); margin:0 0 8px; }
+.v-lead { font-size:13.5px; color:var(--muted); margin-bottom:24px; line-height:1.7; }
+.svc-pills { display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+.svc-pill { padding:7px 14px; border-radius:20px; border:1.5px solid var(--bdr); background:var(--white); font-size:12.5px; color:var(--slate); cursor:pointer; user-select:none; transition:all .15s; }
+.svc-pill.sel { border-color:var(--mid); background:var(--ice); color:var(--blue); font-weight:600; }
+.vendor-submit-btn { width:100%; padding:13px; background:var(--navy); color:var(--white); border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer; }
+.vendor-success { background:var(--ice); border:1.5px solid var(--sky); border-radius:12px; padding:32px; text-align:center; }
+
+/* ── Responsive ── */
+@media(max-width:700px) {
+  .cov-grid,.step-proc,.f-row,.mkt-grid { grid-template-columns:1fr; }
+  .step-rail { display:none; }
+  nav { padding:0 16px; }
+  .nav-links { display:none; }
+  .hero,.wrap,.wrap-sm,.cta { padding-left:20px; padding-right:20px; }
+  .form-wrap { padding:24px 16px 48px; }
+  .f-card { padding:20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-brand">
+    <svg width="24" height="24" viewBox="0 0 48 54" fill="none">
+      <path d="M24 2L4 10V24C4 36.5 12.5 47.2 24 51C35.5 47.2 44 36.5 44 24V10L24 2Z" fill="rgba(55,138,221,.25)" stroke="rgba(55,138,221,.9)" stroke-width="2"/>
+      <path d="M15 25.5L21 32L33 20" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div>
+      <div class="nav-logo">Stress Free Shield</div>
+      <span class="nav-sub">Damage Waiver Program</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <button class="nav-link active" onclick="nav('home',this)">Overview</button>
+    <button class="nav-link" onclick="nav('coverage',this)">Coverage</button>
+    <button class="nav-link" onclick="nav('claim',this)">File a Claim</button>
+    <button class="nav-link" onclick="nav('vendors',this)">Service Network</button>
+    <button class="nav-link" onclick="nav('tos',this)">Terms</button>
+  </div>
+  <button class="nav-cta" onclick="nav('claim',null)">File a Claim</button>
+</nav>
+
+<!-- ══ TABS ══════════════════════════════════════════════════════════════════ -->
+<div class="tab-bar">
+  <div class="tab active" data-tab="home"     onclick="nav('home',null)">Overview</div>
+  <div class="tab"        data-tab="coverage" onclick="nav('coverage',null)">Coverage & Exclusions</div>
+  <div class="tab"        data-tab="claim"    onclick="nav('claim',null)">File a Claim</div>
+  <div class="tab"        data-tab="vendors"  onclick="nav('vendors',null)">Service Network</div>
+  <div class="tab"        data-tab="tos"      onclick="nav('tos',null)">Terms & Conditions</div>
+</div>
+
+<!-- ══ HOME ═════════════════════════════════════════════════════════════════ -->
+<div id="pg-home" class="pg active">
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div style="display:flex;justify-content:center;margin-bottom:20px">
+        <svg width="52" height="52" viewBox="0 0 48 54" fill="none">
+          <path d="M24 2L4 10V24C4 36.5 12.5 47.2 24 51C35.5 47.2 44 36.5 44 24V10L24 2Z" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
+          <path d="M24 8L9 14.5V24C9 33.5 15.5 42 24 45.2C32.5 42 39 33.5 39 24V14.5L24 8Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+          <path d="M15 24.5L21 31L33 19" stroke="#B5D4F4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 24.5L22 30L31 20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".9"/>
+        </svg>
+      </div>
+      <div class="hero-ey"><div class="hero-dot"></div>Interior Accidental Damage Liability Waiver</div>
+      <h1 class="hero-h1">Stress Free Shield</h1>
+      <p class="hero-sub">Reimbursement for common occurrences</p>
+      <p class="hero-tag">Reinforcing good experiences start to finish — ensuring minor accidental damage doesn't spoil an otherwise successful trip for guests and hosts alike.</p>
+      <div class="rate-row">
+        <div class="rate-card"><span class="rate-num">$25</span><span class="rate-lbl">per rental day</span><span class="rate-sub">capped at $199/trip</span></div>
+        <div class="rate-card"><span class="rate-num">$2,500</span><span class="rate-lbl">max coverage</span><span class="rate-sub">per coverage duration</span></div>
+        <div class="rate-card"><span class="rate-num">$250</span><span class="rate-lbl">deductible</span><span class="rate-sub">per occurrence</span></div>
+      </div>
+      <div class="hero-btns">
+        <button class="btn-pri" onclick="nav('claim',null)">File a Claim</button>
+        <button class="btn-out" onclick="nav('coverage',null)">See What's Covered</button>
+        <button class="btn-out-sm" onclick="nav('tos',null)">Terms & Conditions</button>
+      </div>
+      <p class="not-ins">NOT AN INSURANCE PRODUCT · Not regulated by the CA Department of Insurance</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="eyebrow"><div class="ey-line"></div>How it works</div>
+    <h2 class="sec-title">The review-first process</h2>
+    <p class="sec-lead">Submit your estimate for review before paying. We review photos, damage notes, and repair estimates — then authorize. You pay the vendor only after approval.</p>
+
+    <div class="step-proc">
+      <div class="step-rail" id="step-rail"></div>
+      <div class="step-panel">
+        <div id="step-content"></div>
+        <div class="step-nav">
+          <button class="step-btn-prev" id="sp-prev" onclick="stepGo(-1)">← Previous</button>
+          <div class="step-dots" id="step-dots"></div>
+          <button class="step-btn-next" id="sp-next" onclick="stepGo(1)">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="co gold" style="margin-top:20px">
+      <span class="co-ico">🔍</span>
+      <div class="co-txt gold"><strong>Review-first model:</strong> Do not pay the vendor before submitting your estimate for review. We must have the opportunity to review estimates, photos, and notes before authorizing reimbursement. We may provide you with a list of pre-screened mobile service technicians for faster, more effective resolution.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="cta">
+    <div style="display:flex;justify-content:center;margin-bottom:20px">
+      <svg width="48" height="48" viewBox="0 0 48 54" fill="none">
+        <path d="M24 2L4 10V24C4 36.5 12.5 47.2 24 51C35.5 47.2 44 36.5 44 24V10L24 2Z" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
+        <path d="M15 24.5L21 31L33 19" stroke="#B5D4F4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 24.5L22 30L31 20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".9"/>
+      </svg>
+    </div>
+    <h2 class="cta-h">Shields Up!</h2>
+    <p class="cta-sub">Have a Stress Free Experience</p>
+    <p class="cta-body">as part of our damage waiver coverage program<br>Add the Stress Free Shield when you book your RV or trailer rental reservation.<br>We're here to help!</p>
+    <div class="cta-btns">
+      <button class="btn-pri" onclick="nav('claim',null)">File a Claim</button>
+      <button class="btn-out" onclick="nav('coverage',null)">View Coverage</button>
+    </div>
+    <p class="cta-foot">619.599.6882 · Mike@StressFreeGroup.com · StressFreeRVs.com</p>
+  </div>
+</div>
+
+<!-- ══ COVERAGE ══════════════════════════════════════════════════════════════ -->
+<div id="pg-coverage" class="pg">
+  <div class="wrap">
+    <div class="eyebrow"><div class="ey-line"></div>Coverage details</div>
+    <h2 class="sec-title">What's covered — and what's not</h2>
+    <p class="sec-lead">Items not expressly listed as covered are excluded. All claims are subject to estimate review and approval prior to reimbursement.</p>
+    <div class="cov-grid">
+      <div class="cov-card yes">
+        <div class="cov-hdr"><div class="cov-ico yes">✓</div><div class="cov-title yes">What IS covered</div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Accidental interior damage while vehicle is stationary<span class="cov-note">Not from negligence, misuse, or willful acts</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Refrigerator or freezer handle breakage</div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Microwave turntable plate (glass plate only)<span class="cov-note">Not the microwave unit itself</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Interior sliding door off track<span class="cov-note">Not applicable to slide-out room doors</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Toilet clog — standard clearing<span class="cov-note">Foreign-object blockage requiring pump-out excluded</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Minor marks, scrapes, or scuffs — max 3 inches, one location per occurrence</div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Interior hardware: cabinet latches, magnetic catches, drawer pulls, hinges, handle screws</div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Window blind slats or pull cords — accidental breakage</div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Shower curtain rod or hooks — accidental breakage</div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Broken cup holders or small molded interior trim components</div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Fresh water hose and grommet<span class="new-b">NEW</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Septic hose and adaptor<span class="new-b">NEW</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Stabilizer jack hand-crank<span class="new-b">NEW</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>TV remote — missing or broken<span class="new-b">NEW</span><span class="cov-note">Remote only — not the TV or entertainment unit</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Sink, shower, or tub faucet fixtures — accidental damage<span class="new-b">NEW</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>One courtesy mobile service call<span class="cov-note">If provided by host at host's sole discretion</span></div></div>
+        <div class="cov-item yes"><div class="cov-dot yes"></div><div>Missing interior supply kit items (small bin items only)</div></div>
+        <div class="co blue" style="margin-top:14px;padding:11px 14px">
+          <div style="font-size:12px;color:var(--blue);line-height:1.6"><strong>Scratch & Scuff Limit:</strong> Marks up to 3 inches, one location per occurrence only.</div>
+        </div>
+      </div>
+      <div class="cov-card no">
+        <div class="cov-hdr"><div class="cov-ico no">✕</div><div class="cov-title no">What is NOT covered</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Pet or animal damage of any kind</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Tires, slide-outs, or awnings</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Exterior body, paint, glass, or roof</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Generator or mechanical systems</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>TV, audio, or entertainment system units</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Keys, fobs, or lock hardware</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Acts of nature or acts of God</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Negligence, misuse, or rental agreement violations</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Water damage from open vents or windows</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Theft of any items</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Damage while vehicle is in motion</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Pre-existing or undisclosed damage</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Foreign-object toilet blockage (pump-out required)</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Festival or high-attendance event rentals</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Claims submitted after the 5-day window</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Sensor readings billable by host</div></div>
+        <div class="cov-item no"><div class="cov-dot no"></div><div>Anything covered by another coverage program</div></div>
+      </div>
+    </div>
+    <div class="fest-banner">
+      <span style="font-size:20px;flex-shrink:0">🚫</span>
+      <div>
+        <div class="fest-title">Festival & high-attendance event exclusion</div>
+        <p class="fest-body">The Standard Shield does not apply to any event with <strong>500+ expected attendees within 25 miles</strong> of the vehicle. Named exclusions: Burning Man, Coachella, Stagecoach, King of the Hammers, EDC, and any event designated by Stress Free RVs at booking.</p>
+        <p class="fest-note">Planning an event trip? Ask about Premium Event Coverage — available separately.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CLAIM ═════════════════════════════════════════════════════════════════ -->
+<div id="pg-claim" class="pg">
+  <div class="form-notice"><strong>Claims require estimate submission for review BEFORE vendor payment.</strong> &nbsp;·&nbsp; Questions? Call <strong>619.599.6882</strong></div>
+  <div class="form-wrap">
+    <div class="csb" id="csb"></div>
+    <div id="claim-content"></div>
+  </div>
+</div>
+
+<!-- ══ VENDORS ═══════════════════════════════════════════════════════════════ -->
+<div id="pg-vendors" class="pg">
+  <div class="wrap-sm">
+    <div class="eyebrow"><div class="ey-line"></div>Service network</div>
+    <h2 class="sec-title">Pre-Screened Service Technicians</h2>
+    <p class="sec-lead">When reviewing a Shield claim, we may recommend one of our pre-screened mobile service technicians to resolve the matter more efficiently and effectively. Our network is currently active in the following markets.</p>
+
+    <div class="mkt-grid">
+      <!-- SoCal -->
+      <div class="mkt-card">
+        <div class="mkt-card-hdr">
+          <div class="mkt-ico-box">🌴</div>
+          <div>
+            <div class="mkt-name">Southern California</div>
+            <div class="mkt-status"><div class="mkt-green-dot"></div>Active market</div>
+          </div>
+        </div>
+        <div class="mkt-body">
+          <p class="mkt-desc">San Diego, Los Angeles, Oceanside, Temecula, Coachella Valley, and surrounding areas. One of the highest-volume RV rental markets in the country.</p>
+          <div class="mkt-feat"><div class="mkt-feat-dot"></div><span class="mkt-feat-txt">Mobile service dispatched to your location</span></div>
+          <div class="mkt-feat"><div class="mkt-feat-dot"></div><span class="mkt-feat-txt">Interior repairs, appliance service, plumbing, and general maintenance</span></div>
+          <div class="mkt-feat"><div class="mkt-feat-dot"></div><span class="mkt-feat-txt">Vetted and approved by Stress Free Group LLC</span></div>
+          <div class="vendor-section">
+            <div class="vendor-lbl">Listed providers</div>
+            <a class="vendor-link" href="https://decoservicesfleetmanagement.com/" target="_blank" rel="noopener noreferrer">
+              <div class="vendor-link-left">
+                <div class="vendor-shield-ico">
+                  <svg width="14" height="14" viewBox="0 0 48 54" fill="none"><path d="M24 2L4 10V24C4 36.5 12.5 47.2 24 51C35.5 47.2 44 36.5 44 24V10L24 2Z" fill="rgba(55,138,221,.4)" stroke="rgba(55,138,221,.8)" stroke-width="2"/><path d="M15 25.5L21 32L33 20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="vendor-name">DeCo Fleet Management Services</div>
+                  <div class="vendor-url">decoservicesfleetmanagement.com</div>
+                </div>
+              </div>
+              <div class="vendor-arrow">→</div>
+            </a>
+            <a class="vendor-link" href="https://coachwerxsd.com/" target="_blank" rel="noopener noreferrer">
+              <div class="vendor-link-left">
+                <div class="vendor-shield-ico">
+                  <svg width="14" height="14" viewBox="0 0 48 54" fill="none"><path d="M24 2L4 10V24C4 36.5 12.5 47.2 24 51C35.5 47.2 44 36.5 44 24V10L24 2Z" fill="rgba(55,138,221,.4)" stroke="rgba(55,138,221,.8)" stroke-width="2"/><path d="M15 25.5L21 32L33 20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="vendor-name">Coachwerx SD</div>
+                  <div class="vendor-url">coachwerxsd.com</div>
+                </div>
+              </div>
+              <div class="vendor-arrow">→</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Las Vegas -->
+      <div class="mkt-card">
+        <div class="mkt-card-hdr">
+          <div class="mkt-ico-box">🏜️</div>
+          <div>
+            <div class="mkt-name">Las Vegas, NV</div>
+            <div class="mkt-status"><div class="mkt-green-dot"></div>Active market</div>
+          </div>
+        </div>
+        <div class="mkt-body">
+          <p class="mkt-desc">Las Vegas metro, Henderson, and surrounding Nevada. Top-tier market with high demand from travelers accessing the Grand Canyon and Utah national parks.</p>
+          <div class="mkt-feat"><div class="mkt-feat-dot"></div><span class="mkt-feat-txt">Mobile service dispatched to your location</span></div>
+          <div class="mkt-feat"><div class="mkt-feat-dot"></div><span class="mkt-feat-txt">Interior repairs, appliance service, plumbing, and general maintenance</span></div>
+          <div class="mkt-feat"><div class="mkt-feat-dot"></div><span class="mkt-feat-txt">Vetted and approved by Stress Free Group LLC</span></div>
+          <div class="vendor-accepting"><div class="vendor-acc-dot"></div>Accepting vendor applications — submit a request below</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="co blue" style="margin-bottom:36px">
+      <span class="co-ico">📍</span>
+      <div class="co-txt blue"><strong>Network expanding.</strong> We are actively adding pre-screened technicians in new markets. If you are a qualified mobile RV service technician, submit a request below to be considered for our network.</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="vendor-form-wrap">
+      <div class="eyebrow" style="margin-top:36px"><div class="ey-line"></div>Join the network</div>
+      <h3 class="v-section-title">Become a Pre-Screened Vendor</h3>
+      <p class="v-lead">Qualified mobile RV service technicians can apply to join the Stress Free Shield preferred provider network. Approved vendors receive referrals directly from Stress Free Group LLC when claims are filed in their service area.</p>
+
+      <div id="vendor-form-area"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TOS ════════════════════════════════════════════════════════════════════ -->
+<div id="pg-tos" class="pg">
+  <div class="wrap-sm">
+    <div class="eyebrow"><div class="ey-line"></div>Legal</div>
+    <h2 class="sec-title">Terms & Conditions</h2>
+    <p class="sec-lead">Stress Free Shield Interior Accidental Damage Liability Waiver — v2.0 · March 2026 · Stress Free Group LLC (dba Stress Free RVs)</p>
+    <div class="tos-noins">NOT AN INSURANCE PRODUCT · This waiver is not regulated by the California Department of Insurance · Stress Free Group LLC is not a licensed insurance carrier</div>
+    <div id="tos-acc"></div>
+    <div class="tos-legal">
+      <div class="tos-legal-lbl">Legal Notice</div>
+      <p style="font-size:12.5px;color:var(--muted);line-height:1.8">The Stress Free Shield is NOT AN INSURANCE PRODUCT and is not regulated by the California Department of Insurance. It is a contractual agreement between the Renter and Stress Free Group LLC (dba Stress Free RVs), a California limited liability company. Stress Free Group LLC is not a licensed insurance carrier. Enrollment does not guarantee reimbursement. All claims are subject to review and approval. Governing law: California. Disputes: San Diego County, CA. Shield v2.0 · March 2026.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Nav ──────────────────────────────────────────────────────────────────────
+function nav(id, btn) {
+  document.querySelectorAll('.pg').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.getElementById('pg-' + id).classList.add('active');
+  document.querySelectorAll('[data-tab="' + id + '"]').forEach(t => t.classList.add('active'));
+  if (btn) btn.classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// ── Steps ────────────────────────────────────────────────────────────────────
+const STEPS = [
+  { num:'01', title:'Enroll at Booking', short:'Add Shield at checkout', icon:'📋', hl:false,
+    body:'Select the Stress Free Shield when you book your RV or trailer rental. $25 per rental day, capped at $199 per trip — no matter how long your stay.',
+    detail:'The Shield must be added at the time of booking. It cannot be added after your rental period begins.' },
+  { num:'02', title:'Hit the Road', short:'Travel with coverage active', icon:'🚐', hl:false,
+    body:'Your accidental interior damage waiver is active the moment your rental begins. Focus on your trip — keep the Shield info handy just in case.',
+    detail:'Coverage applies only while the vehicle is stationary and to the specific items listed in the coverage schedule.' },
+  { num:'03', title:'Document & Notify', short:'Photos + 24-hr notification', icon:'📷', hl:false,
+    body:'If damage occurs, photograph everything with a timestamp. Notify Stress Free RVs within 24 hours of returning the vehicle.',
+    detail:'Photo documentation is required. Damage reported more than 24 hours after return may not be eligible for review.' },
+  { num:'04', title:'Submit for Review', short:'Estimate + photos submitted', icon:'📝', hl:true,
+    body:'Obtain a written repair estimate from a licensed vendor. Submit your claim form with photos, the estimate, and your damage description within 5 calendar days of checkout.',
+    detail:'Do not pay the vendor yet. Submit the estimate first — we review all estimates prior to authorizing payment. We may recommend a pre-screened mobile service technician who can resolve the matter more efficiently.' },
+  { num:'05', title:'Estimate Review', short:'We review within 7 days', icon:'🔍', hl:false,
+    body:'Our team reviews your submitted photos, estimate, and notes within 7 calendar days. We may approve as submitted, request adjustments, or recommend one of our pre-screened service providers.',
+    detail:'If we need additional information, a new 7-day review window begins upon your response. No reply within 14 days results in auto-denial.' },
+  { num:'06', title:'Approved — Pay Vendor', short:'Pay only after approval', icon:'✅', hl:false,
+    body:'Once your estimate is approved, proceed to pay the vendor. Submit your proof of payment — we reimburse you the covered amount minus the $250 deductible within 7 business days.',
+    detail:'Maximum reimbursement is $2,500 per coverage duration. Payments issued only after approved estimate and proof of vendor payment are both on file.' },
+];
+let curStep = 0, stepTimer;
+
+function renderStepRail() {
+  document.getElementById('step-rail').innerHTML = STEPS.map((s,i) => `
+    <div class="step-item${i===curStep?' active':i<curStep?' done':''}" onclick="stepPick(${i})">
+      <div class="step-circle">${i<curStep?'✓':i+1}</div>
+      <div class="step-lbl">${s.short}</div>
+    </div>`).join('') +
+    `<div class="step-prog-wrap">
+      <div class="step-prog-track"><div class="step-prog-fill" style="width:${Math.round((curStep+1)/STEPS.length*100)}%"></div></div>
+      <div class="step-count">Step ${curStep+1} of ${STEPS.length}</div>
+    </div>`;
+}
+function renderStepPanel() {
+  const s = STEPS[curStep];
+  document.getElementById('step-content').innerHTML = `
+    <div class="step-hdr">
+      <div class="step-ico-box${s.hl?' hl':''}">${s.icon}</div>
+      <div><div class="step-num-lbl">Step ${s.num}</div><div class="step-title-txt">${s.title}</div></div>
+      ${s.hl?'<div class="review-badge">Review Required</div>':''}
+    </div>
+    <p class="step-body-txt">${s.body}</p>
+    <div class="step-detail${s.hl?' hl':' norm'}">${s.detail}</div>`;
+  document.getElementById('sp-prev').disabled = curStep===0;
+  document.getElementById('sp-next').disabled = curStep===STEPS.length-1;
+  document.getElementById('step-dots').innerHTML = STEPS.map((_,i)=>`<div class="step-dot${i===curStep?' active':i<curStep?' done':''}" style="width:${i===curStep?'20px':'7px'}" onclick="stepPick(${i})"></div>`).join('');
+}
+function stepPick(i) {
+  curStep=i; clearInterval(stepTimer);
+  renderStepRail(); renderStepPanel();
+  stepTimer=setInterval(()=>{ curStep=(curStep+1)%STEPS.length; renderStepRail(); renderStepPanel(); },3200);
+}
+function stepGo(d){ stepPick(Math.max(0,Math.min(STEPS.length-1,curStep+d))); }
+stepPick(0);
+
+// ── Claim form ───────────────────────────────────────────────────────────────
+let cStep=0;
+const CLBLS=['Booking','Damage','Estimate','Review & Submit'];
+const selDmg=new Set();
+
+const DMG=[
+  {id:'handle',lbl:'Fridge / freezer handle',ico:'🚪'},
+  {id:'micro', lbl:'Microwave plate',        ico:'📡'},
+  {id:'door',  lbl:'Sliding door off track', ico:'🚪'},
+  {id:'toilet',lbl:'Toilet clog',            ico:'🚽'},
+  {id:'scratch',lbl:'Minor scratch / scuff', ico:'🔧'},
+  {id:'hw',    lbl:'Interior hardware',      ico:'🔩'},
+  {id:'blind', lbl:'Window blinds / cords',  ico:'🪟'},
+  {id:'shower',lbl:'Shower rod / hooks',     ico:'🚿'},
+  {id:'hose',  lbl:'Fresh water hose',       ico:'💧',n:true},
+  {id:'septic',lbl:'Septic hose / adaptor',  ico:'🔗',n:true},
+  {id:'jack',  lbl:'Stabilizer jack crank',  ico:'⚙️',n:true},
+  {id:'remote',lbl:'TV remote',              ico:'📺',n:true},
+  {id:'faucet',lbl:'Faucet fixtures',        ico:'🚰',n:true},
+  {id:'supply',lbl:'Supply kit items',       ico:'📦'},
+  {id:'other', lbl:'Other interior damage',  ico:'❓'},
+];
+
+function renderCSB() {
+  document.getElementById('csb').innerHTML = CLBLS.map((l,i)=>`
+    <div style="display:flex;align-items:center">
+      <div class="csb-step">
+        <div class="csb-circle${i<cStep?' dn':i===cStep?' act':''}">${i<cStep?'✓':i+1}</div>
+        <div class="csb-lbl${i===cStep?' act':''}">${l}</div>
+      </div>
+      ${i<CLBLS.length-1?`<div class="csb-line${i<cStep?' dn':''}"></div>`:''}
+    </div>`).join('');
+}
+
+function renderClaim() {
+  renderCSB();
+  const el=document.getElementById('claim-content');
+  if(cStep===0){
+    el.innerHTML=`<div class="f-card">
+      <h2 class="f-title">Booking information</h2><p class="f-lead">Provide your reservation details so we can locate your booking.</p>
+      <div class="f-row"><div class="f-fld"><label class="f-lbl">First name *</label><input class="f-in" placeholder="Jane"></div><div class="f-fld"><label class="f-lbl">Last name *</label><input class="f-in" placeholder="Smith"></div></div>
+      <div class="f-fld"><label class="f-lbl">Email address *</label><input class="f-in" type="email" placeholder="jane@email.com"></div>
+      <div class="f-row"><div class="f-fld"><label class="f-lbl">Booking confirmation # *</label><input class="f-in" placeholder="RES-2026-04812"></div><div class="f-fld"><label class="f-lbl">RV unit name / number</label><input class="f-in" placeholder="Unit 08"></div></div>
+      <div class="f-row"><div class="f-fld"><label class="f-lbl">Rental start date *</label><input class="f-in" type="date"></div><div class="f-fld"><label class="f-lbl">Checkout date *</label><input class="f-in" type="date"></div></div>
+      <div class="co gold" style="margin-top:4px"><span class="co-ico">⏱</span><div class="co-txt gold"><strong>5-day deadline:</strong> Claims must be submitted within 5 calendar days of checkout. Do NOT pay the vendor until your estimate has been reviewed and approved.</div></div>
+      <div class="f-nav"><button class="btn-back" disabled>← Back</button><button class="btn-next" onclick="cNav(1)">Continue →</button></div>
+    </div>`;
+  } else if(cStep===1){
+    el.innerHTML=`<div class="f-card">
+      <h2 class="f-title">Damage details</h2><p class="f-lead">Select all damage types that apply and describe what happened.</p>
+      <div class="f-fld"><label class="f-lbl">Type of damage — select all that apply *</label>
+      <div class="dmg-grid">${DMG.map(d=>`<div class="dmg-chip${selDmg.has(d.id)?' sel':''}" id="chip-${d.id}" onclick="togDmg('${d.id}')"><span style="font-size:14px">${d.ico}</span><span style="flex:1">${d.lbl}</span>${d.n?'<span class="new-chip">NEW</span>':''}</div>`).join('')}</div></div>
+      <div class="f-fld"><label class="f-lbl">Date damage was discovered *</label><input class="f-in" type="date"></div>
+      <div class="f-fld"><label class="f-lbl">Damage location & description *</label><textarea class="f-ta" placeholder="e.g. Kitchen — second cabinet from left. Hinge screws pulled out during normal use."></textarea></div>
+      <div class="f-fld"><label class="f-lbl">What happened? *</label><textarea class="f-ta" placeholder="Describe exactly how the damage occurred..."></textarea></div>
+      <div class="f-nav"><button class="btn-back" onclick="cNav(-1)">← Back</button><button class="btn-next" onclick="cNav(1)">Continue →</button></div>
+    </div>`;
+  } else if(cStep===2){
+    el.innerHTML=`<div class="f-card">
+      <h2 class="f-title">Estimate & documentation</h2><p class="f-lead">Upload your repair estimate and damage photos for review. Do not pay the vendor until you receive written approval.</p>
+      <div class="co red" style="margin-bottom:18px"><span class="co-ico">⚠</span><div class="co-txt red">Submit your estimate here first. We will review and respond within 7 days. Do NOT pay the vendor before receiving approval — payments made without authorization cannot be guaranteed for reimbursement.</div></div>
+      <div class="f-fld"><label class="f-lbl">Timestamped damage photos *</label><div class="up-zone"><div class="up-ico">📷</div><div class="up-txt">Clear photos of all damage — date/time stamp must be visible. Multiple angles required.</div><div class="up-hint">Drag & drop or click · JPG, PNG, HEIC, PDF · max 25 MB</div></div></div>
+      <div class="f-fld"><label class="f-lbl">Repair estimate from licensed vendor *</label><div class="up-zone"><div class="up-ico">🧾</div><div class="up-txt">Written quote from a licensed repair vendor. Do not pay until estimate is approved.</div><div class="up-hint">Drag & drop or click · JPG, PNG, HEIC, PDF · max 25 MB</div></div></div>
+      <div class="f-fld"><label class="f-lbl">Vendor name & contact *</label><input class="f-in" placeholder="Vendor name and phone / email"></div>
+      <div class="co gold" style="margin-top:4px"><span class="co-ico">🔧</span><div class="co-txt gold">We may recommend a pre-screened mobile service technician who can resolve the matter more efficiently and effectively.</div></div>
+      <div class="f-nav"><button class="btn-back" onclick="cNav(-1)">← Back</button><button class="btn-next" onclick="cNav(1)">Continue →</button></div>
+    </div>`;
+  } else if(cStep===3){
+    el.innerHTML=`<div class="f-card">
+      <h2 class="f-title">Review & submit</h2><p class="f-lead">Confirm your information, certify accuracy, and submit your claim for review.</p>
+      <div class="cert-box"><input type="checkbox" style="margin-top:3px;accent-color:var(--mid);flex-shrink:0"><label class="cert-lbl">I certify that all information provided is true and accurate. I understand I must await written approval before paying the vendor. I have read and agree to the Stress Free Shield Terms & Conditions.</label></div>
+      <div style="margin-bottom:20px">
+        <div class="tl-row"><span class="tl-time">24 hrs</span><span class="tl-desc">Notify Stress Free RVs of damage after checkout</span></div>
+        <div class="tl-row"><span class="tl-time">5 days</span><span class="tl-desc">Submit claim + estimate + photos</span></div>
+        <div class="tl-row"><span class="tl-time">7 days</span><span class="tl-desc">Estimate review — await approval before paying vendor</span></div>
+        <div class="tl-row"><span class="tl-time">7 biz days</span><span class="tl-desc">Reimbursement after approval + proof of payment</span></div>
+      </div>
+      <button class="btn-submit" onclick="submitClaim()">Submit Claim for Review →</button>
+      <p class="f-foot">Stress Free Group LLC · NOT AN INSURANCE PRODUCT · 619.599.6882 · StressFreeRVs.com</p>
+      <div class="f-nav"><button class="btn-back" onclick="cNav(-1)">← Back</button></div>
+    </div>`;
+  }
+}
+
+function togDmg(id) {
+  const chip=document.getElementById('chip-'+id);
+  selDmg.has(id)?selDmg.delete(id):selDmg.add(id);
+  chip.classList.toggle('sel');
+}
+function cNav(d){ cStep=Math.max(0,Math.min(3,cStep+d)); renderClaim(); window.scrollTo(0,0); }
+function submitClaim(){
+  document.getElementById('claim-content').innerHTML=`<div class="f-card" style="text-align:center;padding:48px 32px">
+    <div style="font-size:40px;margin-bottom:16px">✅</div>
+    <h2 class="f-title" style="text-align:center;margin-bottom:10px">Claim Submitted</h2>
+    <p style="font-size:13.5px;color:var(--muted);max-width:380px;margin:0 auto 24px;line-height:1.75">We have received your Stress Free Shield claim. You will receive an email confirmation within 1 hour with your Claim Reference Number.</p>
+    <div style="background:var(--ice);border:1px solid var(--sky);border-radius:10px;padding:20px 22px;text-align:left;max-width:400px;margin:0 auto 24px">
+      <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">What happens next</div>
+      ${['Email confirmation with your Claim ID (SFS-2026-XXX)','7-day estimate review from complete submission','We may recommend a pre-screened provider or request adjustments','Approval notice sent — then pay vendor','Submit proof of payment — reimbursement within 7 business days'].map((t,i)=>`<div style="display:flex;gap:10px;font-size:12.5px;color:var(--muted);margin-bottom:8px"><span style="color:var(--mid);font-weight:600;flex-shrink:0">${i+1}.</span><span>${t}</span></div>`).join('')}
+    </div>
+    <p style="font-size:12px;color:var(--faint)">Questions? <strong style="color:var(--mid)">Mike@StressFreeGroup.com</strong> · <strong style="color:var(--mid)">619.599.6882</strong></p>
+  </div>`;
+}
+renderClaim();
+
+// ── Vendor form ───────────────────────────────────────────────────────────────
+const AREA_GROUPS=[
+  {r:'Southern California',tier:'top',  cities:['San Diego','Los Angeles','Oceanside','Temecula','Jamul','San Bernardino','Palm Springs','Coachella Valley','Orange County','Santa Barbara']},
+  {r:'Northern California',tier:'top',  cities:['San Francisco','San Jose','Sacramento','Santa Cruz','Monterey','Napa / Sonoma','Fresno','Redding']},
+  {r:'Nevada',             tier:'top',  cities:['Las Vegas','Henderson','Reno','Sparks','Black Rock City']},
+  {r:'Arizona',            tier:'top',  cities:['Phoenix','Scottsdale','Tucson','Flagstaff','Sedona','Lake Havasu']},
+  {r:'Mountain West',      tier:'top',  cities:['Denver','Colorado Springs','Salt Lake City','Bozeman','Billings','Boise','Albuquerque','Santa Fe']},
+  {r:'Pacific Northwest',  tier:'top',  cities:['Seattle','Portland','Eugene','Bend','Spokane','Anchorage']},
+  {r:'Texas',              tier:'high', cities:['Houston','Austin','San Antonio','Dallas','Fort Worth','El Paso']},
+  {r:'Florida',            tier:'high', cities:['Orlando','Miami','Fort Lauderdale','Tampa','Fort Myers','Jacksonville']},
+  {r:'Southeast',          tier:'high', cities:['Nashville','Atlanta','Charlotte','Chattanooga','Asheville']},
+  {r:'Midwest & Northeast',tier:'grow', cities:['Chicago','St. Louis','Indianapolis','Minneapolis','Kansas City','Pittsburgh','New York Metro','Boston','Washington D.C.']},
+  {r:'Other',              tier:null,   cities:['Other — specify below']},
+];
+const SVCS=['Interior repairs','Appliance service','Plumbing / fixtures','Electrical','HVAC','Slide-out service','Roof / exterior','General maintenance'];
+
+const selAreas=new Set(), selSvcs=new Set();
+let openGroup=null, vendorSubmitted=false;
+
+const TIER_LABELS={'top':'Top Tier','high':'High Volume','grow':'Growing Market'};
+
+function renderVendorForm(){
+  if(vendorSubmitted){
+    document.getElementById('vendor-form-area').innerHTML=`<div class="vendor-success">
+      <div style="font-size:32px;margin-bottom:12px">✅</div>
+      <div style="font-family:'Libre Baskerville',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px">Request received</div>
+      <p style="font-size:13px;color:var(--muted);max-width:360px;margin:0 auto 14px;line-height:1.7">Thank you for your interest. A member of the Stress Free Group team will review your submission and follow up within 5 business days.</p>
+      <p style="font-size:12px;color:var(--faint)">619.599.6882 · Mike@StressFreeGroup.com</p>
+    </div>`; return;
+  }
+
+  // Build area picker
+  const areaPicker=AREA_GROUPS.map((g,gi)=>{
+    const anySel=g.cities.some(c=>selAreas.has(c));
+    const cnt=g.cities.filter(c=>selAreas.has(c)).length;
+    const isOpen=openGroup===gi;
+    const tierHtml=g.tier&&!anySel?`<span class="tier-badge ${g.tier}">${TIER_LABELS[g.tier]}</span>`:'';
+    const cntHtml=anySel?`<span class="area-sel-cnt">${cnt}</span>`:'';
+    const dotHtml=anySel?`<div class="area-sel-dot"></div>`:'';
+    return `<div class="area-region">
+      <div class="area-rgn-hdr${anySel?' sel':''}" onclick="toggleGroup(${gi})">
+        <div class="area-rgn-left">${dotHtml}<span class="area-rgn-name${anySel?' sel':''}">${g.r}</span>${tierHtml}${cntHtml}</div>
+        <span class="area-chev${isOpen?' open':''}">▾</span>
+      </div>
+      ${isOpen?`<div class="area-cities">${g.cities.map(c=>`<div class="city-chip${selAreas.has(c)?' sel':''}" onclick="toggleArea('${c.replace(/'/g,"\\'")}',${gi})">${c}</div>`).join('')}</div>`:''}
+    </div>`;
+  }).join('');
+
+  const selectedPills=[...selAreas].map(c=>`<div class="sel-pill" onclick="removeArea('${c.replace(/'/g,"\\'")}')"> ${c} <span class="sel-pill-x">×</span></div>`).join('');
+  const svcPills=SVCS.map(sv=>`<div class="svc-pill${selSvcs.has(sv)?' sel':''}" onclick="toggleSvc('${sv}')">${sv}</div>`).join('');
+
+  document.getElementById('vendor-form-area').innerHTML=`<div class="f-card">
+    <div class="f-row"><div class="f-fld"><label class="f-lbl">First name *</label><input class="f-in" placeholder="First"></div><div class="f-fld"><label class="f-lbl">Last name *</label><input class="f-in" placeholder="Last"></div></div>
+    <div class="f-row"><div class="f-fld"><label class="f-lbl">Business / company name *</label><input class="f-in" placeholder="ABC Mobile RV Service"></div><div class="f-fld"><label class="f-lbl">Years in business</label><input class="f-in" placeholder="e.g. 8"></div></div>
+    <div class="f-row"><div class="f-fld"><label class="f-lbl">Phone *</label><input class="f-in" type="tel" placeholder="(619) 555-0100"></div><div class="f-fld"><label class="f-lbl">Email *</label><input class="f-in" type="email" placeholder="you@company.com"></div></div>
+    <div class="f-fld">
+      <label class="f-lbl">Primary service area(s) — select all that apply *</label>
+      <div class="area-picker">${areaPicker}</div>
+      ${selAreas.size>0?`<div class="area-selected-pills">${selectedPills}</div>`:''}
+    </div>
+    <div class="f-fld"><label class="f-lbl">Services offered *</label><div class="svc-pills">${svcPills}</div></div>
+    <div class="f-fld"><label class="f-lbl">License / certification numbers</label><input class="f-in" placeholder="State license, RVSA, RVIA, or other certifications"></div>
+    <div class="f-fld"><label class="f-lbl">Tell us about your experience</label><textarea class="f-ta" placeholder="Briefly describe your background, types of RVs you service, and why you'd be a good fit for the Stress Free Shield network..."></textarea></div>
+    <div class="co gold" style="margin-bottom:18px"><span class="co-ico">📋</span><div class="co-txt gold">Approval is not guaranteed. All vendors are reviewed by Stress Free Group LLC. Approved vendors will be contacted directly with network terms and referral procedures.</div></div>
+    <button class="vendor-submit-btn" onclick="submitVendor()">Submit Vendor Request →</button>
+  </div>`;
+}
+
+function toggleGroup(gi){ openGroup=(openGroup===gi?null:gi); renderVendorForm(); }
+function toggleArea(city,gi){ selAreas.has(city)?selAreas.delete(city):selAreas.add(city); openGroup=gi; renderVendorForm(); }
+function removeArea(city){ selAreas.delete(city); renderVendorForm(); }
+function toggleSvc(sv){ selSvcs.has(sv)?selSvcs.delete(sv):selSvcs.add(sv); renderVendorForm(); }
+function submitVendor(){ vendorSubmitted=true; renderVendorForm(); }
+renderVendorForm();
+
+// ── TOS ──────────────────────────────────────────────────────────────────────
+const TOS=[
+  {t:'1. Program Description',b:'The Stress Free Shield Interior Accidental Damage Liability Waiver is a contractual damage waiver offered by Stress Free Group LLC, a California limited liability company doing business as Stress Free RVs. This Program is NOT an insurance product and is NOT regulated by the California Department of Insurance. Stress Free Group LLC is not a licensed insurance carrier.'},
+  {t:'2. Enrollment & Fees',b:'The Shield must be selected at the time of booking. It cannot be added retroactively. The fee is $25.00 per rental day, capped at $199.00 per trip. The fee is non-refundable once the rental period has commenced.'},
+  {t:'3. Coverage Terms',b:'Coverage applies only to items expressly listed in the Coverage Schedule. The Renter bears a $250.00 deductible per occurrence. The maximum reimbursement per coverage duration is $2,500.00. Coverage applies only while the vehicle is stationary. Items not expressly listed as covered are excluded.'},
+  {t:'4. Estimate Review & Reimbursement Process',b:'The Shield operates on a review-first reimbursement model. Renter must: (a) notify Stress Free RVs within 24 hours of returning the vehicle; (b) obtain a written repair estimate from a licensed vendor; (c) submit the claim form with photos, the estimate, and a written damage description within 5 calendar days of checkout; and (d) await written approval from Stress Free RVs BEFORE paying the vendor. The Company reserves the right to review all estimates, request adjustments, recommend pre-screened service providers, or deny claims that do not meet coverage criteria.'},
+  {t:'5. Pre-Screened Service Providers',b:'The Company may, at its sole discretion, provide Renter with a list of pre-screened mobile service technicians. Use of a recommended provider may result in faster resolution and expedited claim approval. Use of a provider not on the pre-screened list is permitted but the Company reserves the right to verify credentials and reasonableness of estimates before approving payment.'},
+  {t:'6. Festival & Event Exclusion',b:'The Standard Shield does not apply to Festival or High-Attendance Event rentals, defined as any event with 500 or more expected attendees within 25 miles of the vehicle\'s location. Named exclusions include: Burning Man, Coachella, Stagecoach, King of the Hammers, and Electric Daisy Carnival (EDC). Premium Event Coverage may be available separately.'},
+  {t:'7. Claim Deadlines',b:'24 hours: Notify Stress Free RVs of damage after checkout. 5 calendar days: Submit complete claim form with all required documentation. 7 calendar days: Company review window from complete submission. 14 calendar days: Maximum response window — no reply results in automatic denial. 7 business days: Reimbursement issued after approval and proof of payment. One written appeal is permitted within 7 days of any denial.'},
+  {t:'8. Exclusions & Limitations',b:'This Program does not cover: pet or animal damage; tires, slide-outs, or awnings; exterior body, paint, glass, or roof; generator or mechanical systems; TV, audio, or entertainment system units; keys, fobs, or lock hardware; acts of nature; negligence, misuse, or rental agreement violations; water damage; theft; damage while vehicle is in motion; pre-existing damage; festival rentals; late claims; sensor readings; or anything covered by another coverage program.'},
+  {t:'9. Dispute Resolution & Governing Law',b:'This Program is governed by the laws of the State of California. Any legal action must be brought in San Diego County, California. The parties agree to attempt informal resolution before pursuing formal legal action.'},
+  {t:'10. Program Modification',b:'Stress Free Group LLC reserves the right to modify, suspend, or terminate the Stress Free Shield program at any time. Modifications will not apply retroactively to confirmed bookings with enrolled Shield coverage.'},
+];
+document.getElementById('tos-acc').innerHTML=TOS.map((item,i)=>`
+  <div class="tos-item">
+    <div class="tos-hdr" onclick="togTos(${i})">
+      <span class="tos-hdr-title">${item.t}</span>
+      <div class="tos-chev" id="tc-${i}">▾</div>
+    </div>
+    <div class="tos-body" id="tb-${i}">${item.b}</div>
+  </div>`).join('');
+function togTos(i){ document.getElementById('tb-'+i).classList.toggle('open'); document.getElementById('tc-'+i).classList.toggle('open'); }
+</script>
+</body>
+</html>
