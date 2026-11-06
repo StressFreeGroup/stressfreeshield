@@ -67,6 +67,10 @@ a { color:inherit; }
 button { font-family:inherit; }
 
 /* ── Nav ── */
+.site-foot { background:var(--navy); color:var(--sky); text-align:center; padding:28px 24px; font-size:13px; line-height:1.8; }
+.site-foot a { color:#fff; text-decoration:none; border-bottom:1px solid rgba(181,212,244,.5); }
+.site-foot a:hover { border-bottom-color:#fff; }
+.site-foot .sf-note { font-size:11.5px; color:rgba(181,212,244,.7); margin-top:4px; }
 nav { background:var(--navy); padding:0 32px; display:flex; justify-content:space-between; align-items:center; height:58px; position:sticky; top:0; z-index:100; }
 .nav-brand { display:flex; align-items:center; gap:10px; }
 .nav-logo { font-family:'Libre Baskerville',serif; font-size:16px; font-weight:700; color:var(--white); }
@@ -419,7 +423,7 @@ nav { background:var(--navy); padding:0 32px; display:flex; justify-content:spac
       <button class="btn-pri" onclick="nav('claim',null)">File a Claim</button>
       <button class="btn-out" onclick="nav('coverage',null)">View Coverage</button>
     </div>
-    <p class="cta-foot">619.599.6882 · Mike@StressFreeGroup.com · StressFreeRVs.com</p>
+    <p class="cta-foot">619.935.3733 · Mike@StressFreeGroup.com · StressFreeRVs.com</p>
   </div>
 </div>
 
@@ -487,7 +491,7 @@ nav { background:var(--navy); padding:0 32px; display:flex; justify-content:spac
 
 <!-- ══ CLAIM ═════════════════════════════════════════════════════════════════ -->
 <div id="pg-claim" class="pg">
-  <div class="form-notice"><strong>Claims require estimate submission for review BEFORE vendor payment.</strong> &nbsp;·&nbsp; Questions? Call <strong>619.599.6882</strong></div>
+  <div class="form-notice"><strong>Claims require estimate submission for review BEFORE vendor payment.</strong> &nbsp;·&nbsp; Questions? Call <strong>619.935.3733</strong></div>
   <div class="form-wrap">
     <div class="csb" id="csb"></div>
     <div id="claim-content"></div>
@@ -594,6 +598,11 @@ nav { background:var(--navy); padding:0 32px; display:flex; justify-content:spac
     </div>
   </div>
 </div>
+
+<footer class="site-foot">
+  <div>Website built by <a href="https://www.StressFreeGroup.com" target="_blank" rel="noopener">STRESS FREE GROUP</a> (<a href="https://www.StressFreeGroup.com" target="_blank" rel="noopener">www.StressFreeGroup.com</a>)</div>
+  <div class="sf-note">Stress Free Shield is not an insurance product.</div>
+</footer>
 
 <script>
 // ── Nav ──────────────────────────────────────────────────────────────────────
@@ -741,7 +750,7 @@ function renderClaim() {
         <div class="tl-row"><span class="tl-time">7 biz days</span><span class="tl-desc">Reimbursement after approval + proof of payment</span></div>
       </div>
       <button class="btn-submit" onclick="submitClaim()">Submit Claim for Review →</button>
-      <p class="f-foot">Stress Free Group LLC · NOT AN INSURANCE PRODUCT · 619.599.6882 · StressFreeRVs.com</p>
+      <p class="f-foot">Stress Free Group LLC · NOT AN INSURANCE PRODUCT · 619.935.3733 · StressFreeRVs.com</p>
       <div class="f-nav"><button class="btn-back" onclick="cNav(-1)">← Back</button></div>
     </div>`;
   }
@@ -762,7 +771,7 @@ function submitClaim(){
       <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">What happens next</div>
       ${['Email confirmation with your Claim ID (SFS-2026-XXX)','7-day estimate review from complete submission','We may recommend a pre-screened provider or request adjustments','Approval notice sent — then pay vendor','Submit proof of payment — reimbursement within 7 business days'].map((t,i)=>`<div style="display:flex;gap:10px;font-size:12.5px;color:var(--muted);margin-bottom:8px"><span style="color:var(--mid);font-weight:600;flex-shrink:0">${i+1}.</span><span>${t}</span></div>`).join('')}
     </div>
-    <p style="font-size:12px;color:var(--faint)">Questions? <strong style="color:var(--mid)">Mike@StressFreeGroup.com</strong> · <strong style="color:var(--mid)">619.599.6882</strong></p>
+    <p style="font-size:12px;color:var(--faint)">Questions? <strong style="color:var(--mid)">Mike@StressFreeGroup.com</strong> · <strong style="color:var(--mid)">619.935.3733</strong></p>
   </div>`;
 }
 renderClaim();
@@ -794,7 +803,7 @@ function renderVendorForm(){
       <div style="font-size:32px;margin-bottom:12px">✅</div>
       <div style="font-family:'Libre Baskerville',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px">Request received</div>
       <p style="font-size:13px;color:var(--muted);max-width:360px;margin:0 auto 14px;line-height:1.7">Thank you for your interest. A member of the Stress Free Group team will review your submission and follow up within 5 business days.</p>
-      <p style="font-size:12px;color:var(--faint)">619.599.6882 · Mike@StressFreeGroup.com</p>
+      <p style="font-size:12px;color:var(--faint)">619.935.3733 · Mike@StressFreeGroup.com</p>
     </div>`; return;
   }
 
